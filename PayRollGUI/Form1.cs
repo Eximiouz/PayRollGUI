@@ -115,9 +115,30 @@ namespace PayRollGUI
             }
         }
 
+        void clear(Control con)
+        {
+            foreach (Control c in con.Controls)
+            {
+                if (c is TextBox)
+                    ((TextBox)c).Clear();
+                else
+                    clear(c);
+            }
+        }
+
         private void btnCompute_Click(object sender, EventArgs e)
         {
             Compute();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            clear(this);
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

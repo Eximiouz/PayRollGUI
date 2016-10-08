@@ -42,27 +42,27 @@
             this.cmbLoanCode = new System.Windows.Forms.ComboBox();
             this.cmbLoanYrs = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtGrossPay = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.txtOverTimePay = new System.Windows.Forms.TextBox();
             this.txtBasicPay = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTotalDed = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtAbsDed = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtTax = new System.Windows.Forms.TextBox();
+            this.txtLoan = new System.Windows.Forms.TextBox();
+            this.txtPhilHealth = new System.Windows.Forms.TextBox();
+            this.txtPagibig = new System.Windows.Forms.TextBox();
+            this.txtSSS = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtSSS = new System.Windows.Forms.TextBox();
-            this.txtPagibig = new System.Windows.Forms.TextBox();
-            this.txtPhilHealth = new System.Windows.Forms.TextBox();
-            this.txtLoan = new System.Windows.Forms.TextBox();
-            this.txtTax = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtAbsDed = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtGrossPay = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtTotalDed = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtNetPay = new System.Windows.Forms.TextBox();
             this.btnCompute = new System.Windows.Forms.Button();
@@ -214,6 +214,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "EARNINGS";
             // 
+            // txtGrossPay
+            // 
+            this.txtGrossPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrossPay.Location = new System.Drawing.Point(113, 252);
+            this.txtGrossPay.Name = "txtGrossPay";
+            this.txtGrossPay.ReadOnly = true;
+            this.txtGrossPay.Size = new System.Drawing.Size(100, 24);
+            this.txtGrossPay.TabIndex = 19;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(21, 255);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(96, 20);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "Gross Pay:";
+            // 
             // txtOverTimePay
             // 
             this.txtOverTimePay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -276,6 +295,98 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DEDUCTIONS";
             // 
+            // txtTotalDed
+            // 
+            this.txtTotalDed.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalDed.Location = new System.Drawing.Point(108, 252);
+            this.txtTotalDed.Name = "txtTotalDed";
+            this.txtTotalDed.ReadOnly = true;
+            this.txtTotalDed.Size = new System.Drawing.Size(100, 24);
+            this.txtTotalDed.TabIndex = 28;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(9, 244);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(96, 40);
+            this.label16.TabIndex = 20;
+            this.label16.Text = "Total\r\nDeduction:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtAbsDed
+            // 
+            this.txtAbsDed.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAbsDed.Location = new System.Drawing.Point(108, 187);
+            this.txtAbsDed.Name = "txtAbsDed";
+            this.txtAbsDed.ReadOnly = true;
+            this.txtAbsDed.Size = new System.Drawing.Size(100, 24);
+            this.txtAbsDed.TabIndex = 27;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(15, 186);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 36);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "Absences \r\nDeduction:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtTax
+            // 
+            this.txtTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTax.Location = new System.Drawing.Point(108, 153);
+            this.txtTax.Name = "txtTax";
+            this.txtTax.ReadOnly = true;
+            this.txtTax.Size = new System.Drawing.Size(100, 24);
+            this.txtTax.TabIndex = 25;
+            // 
+            // txtLoan
+            // 
+            this.txtLoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoan.Location = new System.Drawing.Point(108, 122);
+            this.txtLoan.Name = "txtLoan";
+            this.txtLoan.ReadOnly = true;
+            this.txtLoan.Size = new System.Drawing.Size(100, 24);
+            this.txtLoan.TabIndex = 24;
+            // 
+            // txtPhilHealth
+            // 
+            this.txtPhilHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhilHealth.Location = new System.Drawing.Point(108, 90);
+            this.txtPhilHealth.Name = "txtPhilHealth";
+            this.txtPhilHealth.Size = new System.Drawing.Size(100, 24);
+            this.txtPhilHealth.TabIndex = 23;
+            // 
+            // txtPagibig
+            // 
+            this.txtPagibig.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPagibig.Location = new System.Drawing.Point(108, 60);
+            this.txtPagibig.Name = "txtPagibig";
+            this.txtPagibig.Size = new System.Drawing.Size(100, 24);
+            this.txtPagibig.TabIndex = 22;
+            // 
+            // txtSSS
+            // 
+            this.txtSSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSSS.Location = new System.Drawing.Point(108, 29);
+            this.txtSSS.Name = "txtSSS";
+            this.txtSSS.Size = new System.Drawing.Size(100, 24);
+            this.txtSSS.TabIndex = 18;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(58, 159);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(36, 18);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Tax:";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -316,117 +427,6 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "SSS:";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(58, 159);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(36, 18);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Tax:";
-            // 
-            // txtSSS
-            // 
-            this.txtSSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSSS.Location = new System.Drawing.Point(108, 29);
-            this.txtSSS.Name = "txtSSS";
-            this.txtSSS.Size = new System.Drawing.Size(100, 24);
-            this.txtSSS.TabIndex = 18;
-            // 
-            // txtPagibig
-            // 
-            this.txtPagibig.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPagibig.Location = new System.Drawing.Point(108, 60);
-            this.txtPagibig.Name = "txtPagibig";
-            this.txtPagibig.Size = new System.Drawing.Size(100, 24);
-            this.txtPagibig.TabIndex = 22;
-            // 
-            // txtPhilHealth
-            // 
-            this.txtPhilHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhilHealth.Location = new System.Drawing.Point(108, 90);
-            this.txtPhilHealth.Name = "txtPhilHealth";
-            this.txtPhilHealth.Size = new System.Drawing.Size(100, 24);
-            this.txtPhilHealth.TabIndex = 23;
-            // 
-            // txtLoan
-            // 
-            this.txtLoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoan.Location = new System.Drawing.Point(108, 122);
-            this.txtLoan.Name = "txtLoan";
-            this.txtLoan.ReadOnly = true;
-            this.txtLoan.Size = new System.Drawing.Size(100, 24);
-            this.txtLoan.TabIndex = 24;
-            // 
-            // txtTax
-            // 
-            this.txtTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTax.Location = new System.Drawing.Point(108, 153);
-            this.txtTax.Name = "txtTax";
-            this.txtTax.ReadOnly = true;
-            this.txtTax.Size = new System.Drawing.Size(100, 24);
-            this.txtTax.TabIndex = 25;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(15, 186);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 36);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "Absences \r\nDeduction:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtAbsDed
-            // 
-            this.txtAbsDed.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAbsDed.Location = new System.Drawing.Point(108, 187);
-            this.txtAbsDed.Name = "txtAbsDed";
-            this.txtAbsDed.ReadOnly = true;
-            this.txtAbsDed.Size = new System.Drawing.Size(100, 24);
-            this.txtAbsDed.TabIndex = 27;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(21, 255);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(96, 20);
-            this.label15.TabIndex = 18;
-            this.label15.Text = "Gross Pay:";
-            // 
-            // txtGrossPay
-            // 
-            this.txtGrossPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrossPay.Location = new System.Drawing.Point(113, 252);
-            this.txtGrossPay.Name = "txtGrossPay";
-            this.txtGrossPay.ReadOnly = true;
-            this.txtGrossPay.Size = new System.Drawing.Size(100, 24);
-            this.txtGrossPay.TabIndex = 19;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(9, 244);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(96, 40);
-            this.label16.TabIndex = 20;
-            this.label16.Text = "Total\r\nDeduction:";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtTotalDed
-            // 
-            this.txtTotalDed.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalDed.Location = new System.Drawing.Point(108, 252);
-            this.txtTotalDed.Name = "txtTotalDed";
-            this.txtTotalDed.ReadOnly = true;
-            this.txtTotalDed.Size = new System.Drawing.Size(100, 24);
-            this.txtTotalDed.TabIndex = 28;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -466,6 +466,7 @@
             this.btnClear.TabIndex = 22;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // BtnExit
             // 
@@ -476,6 +477,7 @@
             this.BtnExit.TabIndex = 23;
             this.BtnExit.Text = "EXIT";
             this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // Form1
             // 
