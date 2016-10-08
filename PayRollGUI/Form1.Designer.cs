@@ -219,6 +219,7 @@
             this.txtOverTimePay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOverTimePay.Location = new System.Drawing.Point(113, 60);
             this.txtOverTimePay.Name = "txtOverTimePay";
+            this.txtOverTimePay.ReadOnly = true;
             this.txtOverTimePay.Size = new System.Drawing.Size(100, 24);
             this.txtOverTimePay.TabIndex = 17;
             // 
@@ -227,6 +228,7 @@
             this.txtBasicPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBasicPay.Location = new System.Drawing.Point(113, 29);
             this.txtBasicPay.Name = "txtBasicPay";
+            this.txtBasicPay.ReadOnly = true;
             this.txtBasicPay.Size = new System.Drawing.Size(100, 24);
             this.txtBasicPay.TabIndex = 15;
             // 
@@ -353,6 +355,7 @@
             this.txtLoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLoan.Location = new System.Drawing.Point(108, 122);
             this.txtLoan.Name = "txtLoan";
+            this.txtLoan.ReadOnly = true;
             this.txtLoan.Size = new System.Drawing.Size(100, 24);
             this.txtLoan.TabIndex = 24;
             // 
@@ -361,6 +364,7 @@
             this.txtTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTax.Location = new System.Drawing.Point(108, 153);
             this.txtTax.Name = "txtTax";
+            this.txtTax.ReadOnly = true;
             this.txtTax.Size = new System.Drawing.Size(100, 24);
             this.txtTax.TabIndex = 25;
             // 
@@ -380,6 +384,7 @@
             this.txtAbsDed.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAbsDed.Location = new System.Drawing.Point(108, 187);
             this.txtAbsDed.Name = "txtAbsDed";
+            this.txtAbsDed.ReadOnly = true;
             this.txtAbsDed.Size = new System.Drawing.Size(100, 24);
             this.txtAbsDed.TabIndex = 27;
             // 
@@ -398,6 +403,7 @@
             this.txtGrossPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrossPay.Location = new System.Drawing.Point(113, 252);
             this.txtGrossPay.Name = "txtGrossPay";
+            this.txtGrossPay.ReadOnly = true;
             this.txtGrossPay.Size = new System.Drawing.Size(100, 24);
             this.txtGrossPay.TabIndex = 19;
             // 
@@ -417,6 +423,7 @@
             this.txtTotalDed.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalDed.Location = new System.Drawing.Point(108, 252);
             this.txtTotalDed.Name = "txtTotalDed";
+            this.txtTotalDed.ReadOnly = true;
             this.txtTotalDed.Size = new System.Drawing.Size(100, 24);
             this.txtTotalDed.TabIndex = 28;
             // 
@@ -435,6 +442,7 @@
             this.txtNetPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNetPay.Location = new System.Drawing.Point(648, 314);
             this.txtNetPay.Name = "txtNetPay";
+            this.txtNetPay.ReadOnly = true;
             this.txtNetPay.Size = new System.Drawing.Size(100, 24);
             this.txtNetPay.TabIndex = 20;
             // 
@@ -447,6 +455,7 @@
             this.btnCompute.TabIndex = 21;
             this.btnCompute.Text = "COMPUTE";
             this.btnCompute.UseVisualStyleBackColor = true;
+            this.btnCompute.Click += new System.EventHandler(this.btnCompute_Click);
             // 
             // btnClear
             // 

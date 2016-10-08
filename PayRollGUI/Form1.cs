@@ -21,11 +21,13 @@ namespace PayRollGUI
         {
             string EmpName, EmpCode;
             double DailyRate, BasicPay, OvertimePay, SSS, Pagibig, PhilHealth, Loan, Tax, AbsDed, GrossPay, TotalDed, NetPay;
-            int HrsWork, NumAbs, LoanYrs;
+            int HrsWork, OverTimehrs, NumAbs, LoanYrs;
             char LoanCode;
             int errcode = 0;
             /*ERROR CODES
              * 1 = Invalid Input
+             * 2 = Invalid Loan Combo
+             * 3 = Hrs Works Less Than 40
              */
 
             if(double.TryParse(txtDailyRate.Text, out DailyRate) && 
@@ -49,13 +51,48 @@ namespace PayRollGUI
                 SSS = double.Parse(txtSSS.Text);
                 Pagibig = double.Parse(txtPagibig.Text);
                 PhilHealth = double.Parse(txtPhilHealth.Text);
+
+                Loan = LoanCheck(LoanCode, LoanYrs);
+                
+                if (Loan > 0)
+                {
+                    if (HrsWork >= 40)
+                    {
+                        BasicPay = HrsWork * DailyRate;
+                        OverTimehrs = HrsWork - 40;
+                        OvertimePay = OverTimehrs * DailyRate;
+                        GrossPay = BasicPay + OvertimePay;
+                        Tax = GrossPay * 0.08;
+                        AbsDed = NumAbs * DailyRate;
+                        TotalDed = SSS + Pagibig + PhilHealth + Loan + Tax + AbsDed;
+                        NetPay = GrossPay - TotalDed;
+
+                        txtBasicPay.Text = BasicPay.ToString();
+                        txtOverTimePay.Text = OvertimePay.ToString();
+                        txtGrossPay.Text = GrossPay.ToString();
+                        txtLoan.Text = Loan.ToString();
+                        txtTax.Text = Tax.ToString();
+                        txtAbsDed.Text = AbsDed.ToString();
+                        txtTotalDed.Text = TotalDed.ToString();
+                        txtNetPay.Text = NetPay.ToString();
+
+                    }
+                    else
+                    {
+                        errcode = 3;
+                    }
+                }
+                else
+                {
+                    errcode = 2;
+                }
+
             }
             else
             {
                 errcode = 1;
             }
 
-           
         }
 
         int LoanCheck(char LoanCode, int LoanYrs)
@@ -76,6 +113,11 @@ namespace PayRollGUI
             {
                 return 0;
             }
+        }
+
+        private void btnCompute_Click(object sender, EventArgs e)
+        {
+            Compute();
         }
     }
 }
