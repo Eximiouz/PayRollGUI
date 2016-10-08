@@ -23,6 +23,8 @@ namespace PayRollGUI
             double DailyRate, BasicPay, OvertimePay, SSS, Pagibig, PhilHealth, Loan, Tax, AbsDed, GrossPay, TotalDed, NetPay;
             int HrsWork, NumAbs, LoanYrs;
             char LoanCode;
+            //asd
+            //dsad
         }
     }
 }
