@@ -55,6 +55,27 @@ namespace PayRollGUI
                 errcode = 1;
             }
 
+           
+        }
+
+        int LoanCheck(char LoanCode, int LoanYrs)
+        {
+            if (LoanCode == 'C' && LoanYrs == 5)
+            {
+                return 10000;
+            }
+            else if (LoanCode == 'P' && LoanYrs == 10)
+            {
+                return 20000;
+            }
+            else if (LoanCode == 'R' && LoanYrs == 20)
+            {
+                return 40000;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
