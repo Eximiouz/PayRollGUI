@@ -16,5 +16,13 @@ namespace PayRollGUI
         {
             InitializeComponent();
         }
+
+        void Compute()
+        {
+            string EmpName, EmpCode;
+            double DailyRate, BasicPay, OvertimePay, SSS, Pagibig, PhilHealth, Loan, Tax, AbsDed, GrossPay, TotalDed, NetPay;
+            int HrsWork, NumAbs, LoanYrs;
+            char LoanCode;
+        }
     }
 }
