@@ -93,6 +93,19 @@ namespace PayRollGUI
                 errcode = 1;
             }
 
+            if (errcode == 1)
+            {
+                MessageBox.Show("Invalid Inputs.");
+            }
+            else if (errcode == 1)
+            {
+                MessageBox.Show("Invalid Loan Combination.");
+            }
+            if (errcode == 3)
+            {
+                MessageBox.Show("Hours Worked must be equal or more than 40");
+            }
+
         }
 
         int LoanCheck(char LoanCode, int LoanYrs)
