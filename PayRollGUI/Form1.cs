@@ -29,8 +29,14 @@ namespace PayRollGUI
              * 2 = Invalid Loan Combo
              * 3 = Hrs Works Less Than 40
              */
+            DialogResult confirmCompute;
 
-            if(double.TryParse(txtDailyRate.Text, out DailyRate) && 
+            confirmCompute = MessageBox.Show("Do you want to compute the following?", "Confirm", MessageBoxButtons.YesNo);
+
+            if (confirmCompute == System.Windows.Forms.DialogResult.Yes)
+            {
+
+                if (double.TryParse(txtDailyRate.Text, out DailyRate) &&
                int.TryParse(txtHrsWork.Text, out HrsWork) &&
                int.TryParse(txtNumAbs.Text, out NumAbs) &&
                char.TryParse(cmbLoanCode.Text, out LoanCode) &&
@@ -40,72 +46,73 @@ namespace PayRollGUI
                double.TryParse(txtPhilHealth.Text, out PhilHealth) &&
                txtEmpName.Text.Length > 0 &&
                txtEmpCode.Text.Length > 0)
-            {
-                EmpName = txtEmpName.Text;
-                EmpCode = txtEmpCode.Text;
-                DailyRate = double.Parse(txtDailyRate.Text);
-                HrsWork = int.Parse(txtHrsWork.Text);
-                NumAbs= int.Parse(txtNumAbs.Text);
-                LoanCode = char.Parse(cmbLoanCode.Text);
-                LoanYrs = int.Parse(cmbLoanYrs.Text);
-                SSS = double.Parse(txtSSS.Text);
-                Pagibig = double.Parse(txtPagibig.Text);
-                PhilHealth = double.Parse(txtPhilHealth.Text);
-
-                Loan = LoanCheck(LoanCode, LoanYrs);
-                
-                if (Loan > 0)
                 {
-                    if (HrsWork >= 40)
+                    EmpName = txtEmpName.Text;
+                    EmpCode = txtEmpCode.Text;
+                    DailyRate = double.Parse(txtDailyRate.Text);
+                    HrsWork = int.Parse(txtHrsWork.Text);
+                    NumAbs = int.Parse(txtNumAbs.Text);
+                    LoanCode = char.Parse(cmbLoanCode.Text);
+                    LoanYrs = int.Parse(cmbLoanYrs.Text);
+                    SSS = double.Parse(txtSSS.Text);
+                    Pagibig = double.Parse(txtPagibig.Text);
+                    PhilHealth = double.Parse(txtPhilHealth.Text);
+
+                    Loan = LoanCheck(LoanCode, LoanYrs);
+
+                    if (Loan > 0)
                     {
-                        BasicPay = HrsWork * DailyRate;
-                        OverTimehrs = HrsWork - 40;
-                        OvertimePay = OverTimehrs * DailyRate;
-                        GrossPay = BasicPay + OvertimePay;
-                        Tax = GrossPay * 0.08;
-                        AbsDed = NumAbs * DailyRate;
-                        TotalDed = SSS + Pagibig + PhilHealth + Loan + Tax + AbsDed;
-                        NetPay = GrossPay - TotalDed;
+                        if (HrsWork >= 40)
+                        {
+                            BasicPay = HrsWork * DailyRate;
+                            OverTimehrs = HrsWork - 40;
+                            OvertimePay = OverTimehrs * DailyRate;
+                            GrossPay = BasicPay + OvertimePay;
+                            Tax = GrossPay * 0.08;
+                            AbsDed = NumAbs * DailyRate;
+                            TotalDed = SSS + Pagibig + PhilHealth + Loan + Tax + AbsDed;
+                            NetPay = GrossPay - TotalDed;
 
-                        txtBasicPay.Text = BasicPay.ToString();
-                        txtOverTimePay.Text = OvertimePay.ToString();
-                        txtGrossPay.Text = GrossPay.ToString();
-                        txtLoan.Text = Loan.ToString();
-                        txtTax.Text = Tax.ToString();
-                        txtAbsDed.Text = AbsDed.ToString();
-                        txtTotalDed.Text = TotalDed.ToString();
-                        txtNetPay.Text = NetPay.ToString();
+                            txtBasicPay.Text = BasicPay.ToString();
+                            txtOverTimePay.Text = OvertimePay.ToString();
+                            txtGrossPay.Text = GrossPay.ToString();
+                            txtLoan.Text = Loan.ToString();
+                            txtTax.Text = Tax.ToString();
+                            txtAbsDed.Text = AbsDed.ToString();
+                            txtTotalDed.Text = TotalDed.ToString();
+                            txtNetPay.Text = NetPay.ToString();
 
+                        }
+                        else
+                        {
+                            errcode = 3;
+                        }
                     }
                     else
                     {
-                        errcode = 3;
+                        errcode = 2;
                     }
+
                 }
                 else
                 {
-                    errcode = 2;
+                    errcode = 1;
+                }
+
+                if (errcode == 1)
+                {
+                    MessageBox.Show("Invalid Inputs.");
+                }
+                else if (errcode == 1)
+                {
+                    MessageBox.Show("Invalid Loan Combination.");
+                }
+                if (errcode == 3)
+                {
+                    MessageBox.Show("Hours Worked must be equal or more than 40");
                 }
 
             }
-            else
-            {
-                errcode = 1;
-            }
-
-            if (errcode == 1)
-            {
-                MessageBox.Show("Invalid Inputs.");
-            }
-            else if (errcode == 1)
-            {
-                MessageBox.Show("Invalid Loan Combination.");
-            }
-            if (errcode == 3)
-            {
-                MessageBox.Show("Hours Worked must be equal or more than 40");
-            }
-
         }
 
         int LoanCheck(char LoanCode, int LoanYrs)
@@ -146,12 +153,24 @@ namespace PayRollGUI
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            clear(this);
+            DialogResult confirmClear;
+
+            confirmClear = MessageBox.Show("Do you want to clear all inputs?", "Confirm", MessageBoxButtons.YesNo);
+
+            if (confirmClear == System.Windows.Forms.DialogResult.Yes)
+            {
+                clear(this);
+            }
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult confirmExit;
+
+            confirmExit = MessageBox.Show("Do you want to Exit?", "Confirm", MessageBoxButtons.YesNo);
+
+            if (confirmExit == System.Windows.Forms.DialogResult.Yes)
+                this.Close();
         }
     }
 }
